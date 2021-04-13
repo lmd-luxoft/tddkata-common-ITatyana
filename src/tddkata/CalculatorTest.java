@@ -48,5 +48,20 @@ public class CalculatorTest {
 
 		assertEquals(expected,actual);
 	}
+	@Test
+	public void Test5() {
+		Calc calc = new Calc();
+		int actual = Integer.parseInt(String.valueOf(calc.sum("0")));
+		int expected = 0;
 
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void TestAdd() {
+		Calc calc = new Calc();
+		int actual = Calc.AddTest("1,2");
+		int expected =3;
+
+		assertEquals(expected,actual);
+	}
 }
