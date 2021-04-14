@@ -1,17 +1,21 @@
 package tddkata;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Calc {
 	public int sum(String expression) {
 		// TODO Auto-generated method stub
-
-		throw new UnsupportedOperationException();
+if (expression==null) expression = "0";
+		int strSum =0;
+		Pattern p = Pattern.compile("\\d");//("[0-9&&[012]]");//("\\b\\w*\\d+\\w*,?\\b");
+		Matcher m = p.matcher(expression);
+		while(m.find()) {
+			strSum = strSum+Integer.parseInt(String.valueOf(expression.substring(m.start(), m.end())));
+		}
+		return strSum;
+		//throw new UnsupportedOperationException();
 	}
 
-	public static int AddTest(String numbers) {
-		// TODO Auto-generated method stub
-		String[] strDigit = numbers.split(",");
-		int sumDigit = Integer.parseInt(strDigit[0]+strDigit[1]);
-		//return sumDigit;
-		throw new UnsupportedOperationException();
-	}
+
 }
