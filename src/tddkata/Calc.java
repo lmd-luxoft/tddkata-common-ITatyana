@@ -13,6 +13,7 @@ if (expression==null) expression = "0";
 		while(m.find()) {
 			strSum = strSum+Integer.parseInt(String.valueOf(expression.substring(m.start(), m.end())));
 		}
+
 		return strSum;
 		//throw new UnsupportedOperationException();
 	}

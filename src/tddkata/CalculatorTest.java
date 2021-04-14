@@ -18,7 +18,7 @@ public class CalculatorTest {
 	public void Test1() {
 		Calc calc = new Calc();
 		int actual = calc.sum("1");
-		int expected =0;
+		int expected =1;
 
 		assertEquals(expected,actual);
 	}
@@ -56,12 +56,6 @@ public class CalculatorTest {
 
 		assertEquals(expected, actual);
 	}
-	@Test
-	public void TestAdd() {
-		Calc calc = new Calc();
-		int actual = Calc.AddTest("1,2");
-		int expected =3;
 
-		assertEquals(expected,actual);
-	}
+	
 }
