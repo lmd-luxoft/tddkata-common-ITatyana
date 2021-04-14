@@ -57,5 +57,15 @@ public class CalculatorTest {
 		assertEquals(expected, actual);
 	}
 
-	
+	@Test
+	public void Test6() {
+		Calc calc = new Calc();
+		int actual = calc.sum("//;\n1;2;3");
+		System.out.println(actual+"- actual");
+		int expected = 6;
+
+		assertEquals(expected, actual);
+	}
+
+
 }
